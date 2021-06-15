@@ -15,7 +15,7 @@
         "prestart": "babel-node tools/nodeVersionCheck.js",
         "start": "npm-run-all --parallel open:dev lint:watch",
         "prebuild": "babel-node tools/nodeVersionCheck.js && npm run lint",
-        "build": "npm run open:prod && babel-node tools/distServer.js",
+        "build": "npm run open:prod",
         "analyze": "webpack --config webpack.analyze.js",
         "dev-hmr-nodemon": "webpack-dev-server --hot --watch --config webpack.dev.hot.js",
         "format": "prettier --write \"**/*.+(js|json|html)\" && stylelint \"src/**/*.scss\" --fix --quiet",
