@@ -1,0 +1,23 @@
+//
+//function convert pixel to rem
+//how to use :
+// font-size : calculateRem(16px);
+//
+
+@function calculateRem($size) {
+    $remSize: $size / $base-fontsize;
+
+    @return #{$remSize}rem;
+}
+
+//
+//function calculate collumn
+//how to use :
+// font-size : calculateCollumn(12,12)
+//
+
+@function calculateCollumn($column: 1, $maxcolumn: 12) {
+    $size: 100% / $maxcolumn * $column;
+
+    @return $size;
+}

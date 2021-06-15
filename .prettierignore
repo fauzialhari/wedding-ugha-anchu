@@ -1,0 +1,9 @@
+# ignore test scripts
+__tests__
+__mocks__
+coverage
+
+node_modules
+dist
+tools
+.vscode

@@ -1,0 +1,26 @@
+.main-banner {
+    min-height: 100vh;
+    color: white;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .absolute {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h3 {
+            margin: 0 auto;
+            width: 80%;
+            letter-spacing: 2px;
+            text-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px;
+            padding: 12px 20px;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+    }
+}

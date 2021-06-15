@@ -1,0 +1,22 @@
+extends ../../_layouts/base.pug
+
+block append config
+	- var page = 'Styleguide'
+
+block append variable
+	- var data = jsonData.data
+
+block content
+	+main-banner()
+	+bride-groom()
+	+venue()
+	.container-fluid
+		h1 Should Always Capitalize the First Letter
+
+	.container
+		h2 Contoh H2
+		h3 Contoh H3
+		h4 Contoh H4
+		p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, commodi repudiandae, vitae perferendis suscipit omnis neque ducimus debitis officia doloribus velit esse obcaecati, corporis quo natus accusamus libero sit numquam.
+		p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, commodi repudiandae, vitae perferendis suscipit omnis neque ducimus debitis officia doloribus velit esse obcaecati, corporis quo natus accusamus libero sit numquam.
+

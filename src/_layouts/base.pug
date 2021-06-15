@@ -1,0 +1,51 @@
+block config
+	//- Setup site's config such as title and page name
+	//- Otherwise default empty
+	//- You can add some var as you need here
+	- var title = title || 'Fauzi Alhari'
+	- var page = page || ''
+
+block variable
+	//- block for global variable
+
+block mixin
+	//- block for global mixin
+
+include ../_modules/main.pug
+
+doctype html
+
+html
+
+	head
+		// meta
+		title #{title} - #{page}
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="description", content="#{title}")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+
+		// icons
+		link(rel="apple-touch-icon", href="apple-touch-icon.png")
+		link(rel="icon", href="img/favicon.ico")
+
+		// stylesheets
+		link(rel="stylesheet", href="css/style.2.0.0.css", type="text/css")
+
+		block head
+
+	body
+
+
+		main(role="main")
+			block content
+
+
+		// script
+		script(src="js/bundle.2.0.0.js", defer)
+		script(src="js/xnamespace.2.0.0.js", defer)
+
+		// stylesheets
+		link(rel="stylesheet", type="text/css", media="print", href="css/print.2.0.0.css")
+
+		block script

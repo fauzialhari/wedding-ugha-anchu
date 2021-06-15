@@ -1,0 +1,41 @@
+// Breakpoints
+$bpMobile: 320px;
+$bpLgMobile: 480px;
+$bpTablet: 768px;
+$bpDesktop: 1020px;
+
+// Bootstrap Override
+
+// -- Container padding
+$grid-gutter-width: 30px !default;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: $bpLgMobile,
+    md: $bpTablet,
+    lg: $bpDesktop,
+) !default;
+$container-max-widths: (
+    xl: $bpDesktop,
+) !default;
+// End Bootstrap Override
+
+// Fonts
+$base: 16;
+$thin: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$ultra-bold: 900;
+
+$font-family-base: 'Montserrat', sans-serif;
+$base-fontsize: 16px;
+
+$glyphicons: 'Glyphicons Halflings';
+
+// basic variables
+$themecolor: #edc2c5;
+$bodyfontcolor: #2b2a29;
+$buttoncolor: #da6c05;
+$grey: #aaaaaa;

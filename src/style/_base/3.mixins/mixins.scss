@@ -1,0 +1,282 @@
+@mixin mobile {
+    @media (max-width: $bpTablet - 1) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $bpTablet) and (max-width: $bpDesktop - 1) {
+        @content;
+    }
+}
+
+@mixin tabletDesktop {
+    @media (min-width: $bpTablet) {
+        @content;
+    }
+}
+
+@mixin nonDesktop {
+    @media (max-width: $bpDesktop - 1) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $bpDesktop) {
+        @content;
+    }
+}
+
+@mixin lgDesktop {
+    @media (min-width: $bpLgDesktop) {
+        @content;
+    }
+}
+
+// Font awesome helper
+// Can be use for using Font Awesome on after or before CSS pseudo
+
+@mixin fa-icon-helper {
+    font-family: FontAwesome !important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+// change old text-decoration: underline effect to new one
+
+@mixin underline {
+    text-decoration: none;
+    transition: box-shadow, color 0.3s;
+
+    &:hover {
+        text-decoration: none;
+        box-shadow: inset 0 -1px 0 0;
+    }
+}
+
+// reset underline above to old one
+
+@mixin reset-underline {
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+// mixin for text style guide
+
+@mixin default-text($text-name, $default-text-styles) {
+    $text-styles: map-get($default-text-styles, $text-name);
+
+    font-family: map-get($text-styles, 'font-family');
+    font-weight: map-get($text-styles, 'font-weight');
+    font-size: map-get($text-styles, 'font-size');
+    line-height: map-get($text-styles, 'line-height');
+
+    @if $text-name == 'button' {
+        text-transform: uppercase;
+    }
+}
+
+// placeholder style
+
+@mixin placeholder($size, $style) {
+    &::-webkit-input-placeholder {
+        font-style: $style;
+        font-size: $size;
+    }
+
+    &:-moz-placeholder {
+        font-style: $style;
+        font-size: $size;
+    }
+
+    &::-moz-placeholder {
+        font-style: $style;
+        font-size: $size;
+    }
+
+    &:-ms-input-placeholder {
+        font-style: $style;
+        font-size: $size;
+    }
+}
+
+// thumbnail image crop cover
+
+@mixin cover($width, $height) {
+    width: $width;
+    height: $height;
+    // overflow: hidden;
+    position: relative;
+    border: 1px solid red;
+    margin: 100px auto;
+
+    img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        height: 100%;
+        width: auto;
+        left: 50%;
+
+        @include translateX(-50%);
+
+        &.left {
+            left: 0;
+
+            @include translateX(0);
+        }
+
+        &.right {
+            left: auto;
+            right: 0;
+
+            @include translateX(0);
+        }
+
+        &.portrait {
+            width: 100%;
+            height: auto;
+            top: 50%;
+            left: 0;
+
+            @include translateY(-50%);
+
+            &.top {
+                top: 0;
+
+                @include translateY(0);
+            }
+
+            &.bottom {
+                bottom: 0;
+                top: auto;
+
+                @include translateY(0);
+            }
+        }
+    }
+}
+
+// thumbnail image crop contain
+
+@mixin contain($width, $height) {
+    width: $width;
+    height: $height;
+    // overflow: hidden;
+    position: relative;
+    border: 1px solid red;
+    margin: 0 auto;
+
+    img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 0;
+
+        @include translateY(-50%);
+
+        &.top {
+            top: 0;
+
+            @include translateY(0);
+        }
+
+        &.bottom {
+            bottom: 0;
+            top: auto;
+
+            @include translateY(0);
+        }
+
+        &.portrait {
+            top: 0;
+            height: 100%;
+            width: auto;
+            left: 50%;
+
+            @include translateX(-50%);
+
+            &.left {
+                left: 0;
+
+                @include translateX(0);
+            }
+
+            &.right {
+                left: auto;
+                right: 0;
+
+                @include translateX(0);
+            }
+        }
+    }
+}
+
+//-----MIXIN FOR BORDER RADIUS ----------
+
+@mixin rounded($radius: 0.5em) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//-----MIXIN FOR BOX SHADOW ----------
+
+@mixin box-shadow($top, $left, $blur, $width, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $width $color;
+        -moz-box-shadow: inset $top $left $blur $width $color;
+        box-shadow: inset $top $left $blur $width $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $width $color;
+        -moz-box-shadow: $top $left $blur $width $color;
+        box-shadow: $top $left $blur $width $color;
+    }
+}
+
+//----- Set Position middle----------
+
+@mixin positionMiddle($args) {
+    @if $args == top {
+        top: 50%;
+        transform: translateY(-50%);
+    } @else if $args ==left {
+        left: 50%;
+        transform: translateX(-50%);
+    } @else {
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%, -50%);
+    }
+}
+
+//----- Set Transitiopn----------
+
+@mixin transition($args, $delay: 0) {
+    transition: $args;
+    transition-delay: $delay;
+}
+
+//------- Create Grid System ------------------------------
+
+@mixin collumnFlex($collumn: 1, $maxcolumn: 12, $offset: 0, $plus: true) {
+    display: block;
+    width: 100%;
+    // position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 0 0 #{calculateGrid($collumn, $maxcolumn)};
+
+    @if $plus {
+        max-width: calc(#{calculateGrid($collumn, $maxcolumn)} + #{$offset});
+    } @else {
+        max-width: calc(#{calculateGrid($collumn, $maxcolumn)} - #{$offset});
+    }
+}

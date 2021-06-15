@@ -1,0 +1,31 @@
+include ../../molecules/title-marker/title-marker.pug
+mixin venue()
+	section.venue 
+		.container
+			.text-center
+				+title-marker("Venue")
+			.detail 
+				.row 
+					.col.col-lg-4 
+						.square-image
+							img(src="../../img/bride.jpg", alt="", srcset="")
+					.col.col-lg
+						.detail 
+							h3 Echalote Restaurant 
+							p
+								span
+									i.fa.fa-map-marker 
+									|   Jl. A.P. Pettarani, no. 80, Makassar (sebelum kantor BPJS Kesehatan Pettarani)
+									br
+								span
+									i.fa.fa-clock-o 
+									|   10.00-11.00 WITA (Akad Nikah)
+									br
+								span
+									i.fa.fa-clock-o 
+									|        11.00 - 14.30 WITA (Resepsi)
+							p when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+							h4 
+								a(href="") 
+									| Lihat lokasi di maps 
+									i.fa.fa-chevron-right

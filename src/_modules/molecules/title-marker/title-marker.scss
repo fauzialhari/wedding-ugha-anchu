@@ -1,0 +1,49 @@
+.title-marker {
+    display: inline-block;
+    margin-bottom: 60px;
+    .icon {
+        position: relative;
+        margin-bottom: 42px;
+
+        img {
+            transform: translateY(12px);
+            width: 65px;
+            fill: green;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            background: rgb(237, 194, 197);
+        }
+
+        &::before {
+            width: 45px;
+        }
+
+        &::after {
+            width: 2px;
+            height: 42px;
+            top: 100%;
+            bottom: auto;
+            transform: translateX(-50%);
+        }
+    }
+
+    .title {
+        h2 {
+            padding: 10px 25px 5px;
+            margin-bottom: 0;
+            line-height: 1;
+            background-color: rgba(237, 194, 197, 0.3);
+            border-top: 2px solid rgb(237, 194, 197);
+            border-bottom: 2px solid rgb(237, 194, 197);
+        }
+    }
+}

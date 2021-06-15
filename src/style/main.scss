@@ -1,0 +1,62 @@
+// import bootstrap variables, grid and mixins
+@import '../style/_base/1.variable/variable.scss';
+@import '~font-awesome/css/font-awesome.css';
+
+// You can just use some component of the bootstrap or all of them
+// Read https://getbootstrap.com/docs/4.3/getting-started/theming/
+// ===================================================================================================
+// Bootstrap Partial Import
+// ===================================================================================================
+
+// @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/dropdown';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/_utilities';
+@import '~bootstrap/scss/reboot';
+
+// ===================================================================================================
+// End Bootstrap Partial Import
+// ===================================================================================================
+
+// SCARAB CARAPACE CORE (MIXIN HELPER)
+@import '~@scarab/core/_';
+
+//BASE ELEMENT / DEFAULT STYLE
+@import '../style/_base/2.function/function.scss';
+@import '../style/_base/3.mixins/mixins.scss';
+@import '../style/_base/4.color/color.scss';
+@import '../style/_base/5.fonts/fonts.scss';
+@import '../style/_base/6.typography/typography.scss';
+
+@import 'default/default.scss';
+@import './component/temp-iframe';
+
+body {
+    // header section
+    // header {
+    //     @import '../_modules/**/**/header.scss';
+    // }
+
+    // main section
+    main[role='main'] {
+        // anticipate page that has very few content ( short height )
+        // to avoid hanging footer
+        min-height: calc(100vh - 527px);
+
+        // ---------Per components style goes here------------
+        @import '../_modules/atoms/**/*.scss';
+        @import '../_modules/organisms/**/*.scss';
+        @import '../_modules/molecules/**/*.scss';
+
+        // Default Styleguide / Page style goes here
+        @import '../style/page/*.scss';
+    }
+
+    // footer section
+    // footer {
+    //     @import '../_modules/**/**/footer.scss';
+    // }
+}

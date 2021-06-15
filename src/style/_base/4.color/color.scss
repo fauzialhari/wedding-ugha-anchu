@@ -1,0 +1,38 @@
+/*
+ * == COLOR VARIABLES ==
+ * You can define your colours here, even you can add your variable color name other than primary, secondary etc
+ * You can also define your colours based on your components.
+ * Use the color using:
+ * Example: 
+ * background-color: get(color, primary, 3); or background-color: get(color, grey, _);
+ */
+
+@include set(
+    color,
+    (
+        black: #2b2a29,
+        white: #ffffff,
+        primary: (
+            _: #edc2c5,
+            1: #ffffff,
+            2: #ffffff,
+            2alt: rgba(28, 45, 82, 0.2),
+            3: #ffffff,
+        ),
+        secondary: (
+            _: #ffffff,
+            1: #ffffff,
+            2: #ffffff,
+            3: #ffffff,
+            4: #ffffff,
+        ),
+        grey: (
+            _: #4a4a4a,
+            1: #4a4a4a,
+            2: #717171,
+            3: #b4b4b3,
+        ),
+        red: #910614,
+        green: #2e5600,
+    )
+);

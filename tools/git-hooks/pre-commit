@@ -1,0 +1,85 @@
+#!/bin/sh
+
+# -------------------
+# Lint for Pug Files
+# -------------------
+echo "Validating Pug Template:"
+PUGLINT="$(git rev-parse --show-toplevel)/node_modules/.bin/pug-lint"
+
+# -> Check for eslint
+if [[ ! -x "$PUGLINT" ]]; then
+  echo "--> Please install Puglint (npm install or npm i --save-dev --save-exact pug-lint)"
+  exit 1
+fi
+
+# -> Iterating through staged files with pug ext
+for file in $(git diff --diff-filter=d --cached --name-only | grep -E '\.(pug)$')
+do
+  git show ":$file" | "$PUGLINT" "$file" # we only want to lint the staged changes, not any un-staged changes
+  if [ $? -ne 0 ]; then
+    echo "PUGLINT failed on staged file '$file'. Please check your code for puglint errors and try again. Puglint rules reference: https://github.com/pugjs/pug-lint/blob/master/docs/rules.md"
+    exit 1 # exit with failure status
+
+    else
+    echo "$file" " -> Passed"
+  fi
+done
+echo "****************************************"
+echo "************Pug Template Valid**********"
+echo "****************************************"
+
+# -------------------
+# Lint for Javascript
+# -------------------
+echo "Validating Javascript:"
+ESLINT="$(git rev-parse --show-toplevel)/node_modules/.bin/eslint"
+
+# -> Check for eslint
+if [[ ! -x "$ESLINT" ]]; then
+  echo "--> Please install ESlint (npm install or npm i --save-dev --save-exact eslint)"
+  exit 1
+fi
+
+# -> Iterating through staged files with js|jsx ext
+for file in $(git diff --diff-filter=d --cached --name-only | grep -E '\.(js|jsx)$')
+do
+  git show ":$file" | "$ESLINT" --stdin --stdin-filename "$file" # we only want to lint the staged changes, not any un-staged changes
+  if [ $? -ne 0 ]; then
+    echo "ESLint failed on staged file '$file'. Please check your code and try again. You can run ESLint manually via npm run lint."
+    exit 1 # exit with failure status
+
+    else
+    echo "$file" " -> Passed"
+  fi
+done
+echo "****************************************"
+echo "************Javascript Valid************"
+echo "****************************************"
+
+# --------------
+# Lint for Style
+# --------------
+echo "Validating SCSS & CSS:"
+STYLELINT="$(git rev-parse --show-toplevel)/node_modules/.bin/stylelint"
+
+# -> Check for stylelint
+if [[ ! -x "$STYLELINT" ]]; then
+  echo "--> Please install Stylelint (npm install or npm install --save-dev --save-exact stylelint)"
+  exit 1
+fi
+
+# -> Iterating through staged files with css|scss ext
+for file in $(git diff --diff-filter=d --cached --name-only | grep -E '\.(css|scss)$')
+do
+  git show ":$file" | "$STYLELINT" --stdin --stdin-filename "$file" # we only want to lint the staged changes, not any un-staged changes
+  if [ $? -ne 0 ]; then
+    echo "Stylelint failed on staged file '$file'. Please check your code and try again. You can run Stylelint manually via npm run stylelint."
+    exit 1 # exit with failure status
+
+    else
+    echo "$file" " -> Passed"
+  fi
+done
+echo "***********************************"
+echo "*********SCSS&CSS Valid************"
+echo "***********************************"

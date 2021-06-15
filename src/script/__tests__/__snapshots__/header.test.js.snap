@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component header toggle function check passes if header-open appened into header upon click 1`] = `
+Array [
+  <header
+    class="xb-header"
+  />,
+]
+`;
+
+exports[`Header Component header toggle function check passes if header-open class appened into header upon click and the html structure correct 1`] = `
+Array [
+  <header
+    class="xb-header"
+  />,
+]
+`;

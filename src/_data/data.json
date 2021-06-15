@@ -1,0 +1,42 @@
+{
+    "personal-detail": {
+        "title": "Personal Details",
+        "data": [
+            { "__field": "Birthday", "__text": "Feb 27th 1991" },
+            { "__field": "Nationality", "__text": "Indonesia" },
+            { "__field": "Language", "__text": "English, Indonesia" },
+            { "__field": "Experience", "__text": "±6 Years" }
+        ]
+    },
+    "contact-detail": {
+        "title": "Contact Details",
+        "data": [
+            { "__icon": "envelope", "__text": "fauzialhari@gmail.com" },
+            { "__icon": "mobile", "__text": "+62822-9372-9034" },
+            { "__icon": "linkedin", "__text": "fauzialhari" },
+            { "__icon": "map-marker", "__text": "Bandung, Indonesia" }
+        ]
+    },
+    "skills-detail": {
+        "title": "Skills",
+        "data": [
+            { "__field": "Vue.js", "__number": "95" },
+            { "__field": "React", "__number": "75" },
+            { "__field": "JQuery", "__number": "95" },
+            { "__field": "JS(ES-6)", "__number": "95" },
+            { "__field": "CSS/SCSS", "__number": "95" },
+            { "__field": "HTML/pug", "__number": "95" },
+            { "__field": "Webpack", "__number": "55" },
+            { "__field": "Jest", "__number": "55" }
+        ]
+    },
+    "personal-skills": [
+        "Fast and strong learner, especially at JS thingy.",
+        "Have a wide knowledge about frontend technology.",
+        "Have good sense of design and its principle (sort of).",
+        "Always try to find the best practices in every task.",
+        "Always try to understand something fundamentally.",
+        "Simplicity is my friend. 😉",
+        "Sometimes my perfecionist becomes my friend but sometimes becomes my foe. 😄"
+    ]
+}

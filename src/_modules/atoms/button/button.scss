@@ -1,0 +1,30 @@
+%btn {
+    padding: 8px 30px 10px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    color: #ffffff;
+    border: 0;
+    border-radius: 5px;
+}
+
+.btn--default {
+    @extend %btn;
+    background: get(color, grey, 3);
+}
+
+.btn--primary {
+    @extend %btn;
+    color: #000000;
+    background: get(color, primary, _);
+}
+
+.btn--secondary {
+    @extend %btn;
+    background: get(color, secondary, _);
+}
+
+.btn--grey {
+    @extend %btn;
+    background: get(color, grey, _);
+}

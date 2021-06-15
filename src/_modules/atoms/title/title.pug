@@ -1,0 +1,19 @@
+mixin title(spec)
+	- spec = spec || {}
+	- spec.__type = spec.__type || ''
+	- spec.__text = spec.__text || ''
+	case spec.__type
+		when 'h1.subtitle'
+			h1.subtitle.fw-bold= spec.__text
+		when 'h2.bold'
+			h2.fw-bold= spec.__text
+		when 'h2'
+			h2.fw-normal= spec.__text
+		when 'h3'
+			h3.fw-bold= spec.__text
+		when 'h4'
+			h4.fw-normal= spec.__text
+				if block 
+					block
+		default
+			h1.fw-normal= spec.__text

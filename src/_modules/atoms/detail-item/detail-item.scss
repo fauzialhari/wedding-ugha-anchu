@@ -1,0 +1,22 @@
+li.detail-item {
+    list-style-type: none;
+
+    .progress-bar {
+        float: right;
+        width: 55%;
+        vertical-align: middle;
+        display: inline-block;
+
+        .behind {
+            height: 8px;
+            width: 100%;
+            background: #d3d3d3;
+            display: inline-block;
+
+            .front {
+                height: 100%;
+                background: #393834;
+            }
+        }
+    }
+}

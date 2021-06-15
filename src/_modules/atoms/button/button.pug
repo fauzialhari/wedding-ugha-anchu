@@ -1,0 +1,24 @@
+mixin button(spec)
+	- spec = spec || {}
+	- spec.__class = spec.__class || ''
+	- spec.__type = spec.__type || 'anchor'
+	- spec.__link = spec.__link || '#'
+	- spec.__text = spec.__text || 'Default Text'
+	- spec.__iconAfter = spec.__iconAfter || ''
+	- spec.__iconBefore = spec.__iconBefore || ''
+
+	- var tag = 'button'
+	- var attributes = {"type" : "button"}
+
+	if spec.__type == 'anchor'
+		- tag = 'a'
+		- attributes = {"href": spec.__link}
+
+	#{tag}.btn&attributes(attributes)(class=spec.__class)
+		if spec.__iconBefore !== ''
+			i(class=spec.__iconBefore)
+			span= spec.__text
+		else
+			span= spec.__text
+			if spec.__iconAfter !== ''
+				i(class=spec.__iconAfter)

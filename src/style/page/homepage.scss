@@ -1,0 +1,65 @@
+//sample content
+.testbox {
+    background: yellowgreen;
+    border-radius: 5px;
+    color: white;
+    margin-top: 20px;
+    transition: all ease-in 0.3s;
+    border-bottom: 5px solid #4a4a4a;
+    padding: 25px;
+
+    a {
+        color: black;
+        font-weight: bold;
+
+        &:focus,
+        &:active {
+            color: red;
+        }
+    }
+}
+
+.content {
+    margin-top: 50px;
+
+    .sampler {
+        margin-bottom: 50px;
+
+        .sample,
+        .tempIframe {
+            float: left;
+            width: 48%;
+            height: 290px;
+        }
+
+        .sample {
+            margin-right: 4%;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    //--library
+    .tempIframe {
+        margin: auto;
+    }
+
+    pre {
+        background: #dddddd;
+    }
+
+    .sample-box {
+        width: 600px;
+        height: 400px;
+        margin-top: 20px;
+    }
+
+    .playerTrigger {
+        margin: auto;
+        display: block;
+    }
+}

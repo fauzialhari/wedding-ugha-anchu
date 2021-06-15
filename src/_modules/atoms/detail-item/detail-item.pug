@@ -1,0 +1,18 @@
+mixin detail-item(spec)
+	- spec = spec || {}
+	- spec.__type = spec.__type || ''
+	- spec.__icon = spec.__icon || ''
+	- spec.__field = spec.__field || ''
+	- spec.__text = spec.__text || ''
+	- spec.__number = spec.__number || ''
+	li.detail-item 
+		if spec.__icon
+			i.fa(class=`fa-${spec.__icon}`)
+		else
+			span.fw-bold= spec.__field
+		if spec.__number
+			.progress-bar
+				.behind 
+					.front(style=`width:${spec.__number}%`)
+		else 
+			span.text-end.float-right= spec.__text
