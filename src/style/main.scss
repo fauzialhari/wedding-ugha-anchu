@@ -45,6 +45,7 @@ body {
         // anticipate page that has very few content ( short height )
         // to avoid hanging footer
         min-height: calc(100vh - 527px);
+        overflow-x: hidden;
 
         // ---------Per components style goes here------------
         @import '../_modules/atoms/**/*.scss';

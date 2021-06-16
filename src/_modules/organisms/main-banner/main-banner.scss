@@ -1,11 +1,25 @@
 .main-banner {
     min-height: 100vh;
-    color: white;
+    position: relative;
+
+    &::before {
+        content: '';
+        background-color: rgba(0, 0, 0, 0.175);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 
     img {
         object-fit: cover;
         width: 100%;
         height: 100vh;
+    }
+    h1,
+    h3 {
+        color: white;
     }
 
     .absolute {

@@ -1,6 +1,7 @@
-mixin title-marker(text)
+mixin title-marker(text, isWithoutIcon)
 	.title-marker.text-center
-		.icon 
-			img(src="../../img/icon/icon.svg", alt="")
+		unless isWithoutIcon
+			.icon 
+				img(src="../../img/icon/icon.svg", alt="")
 		.title 
 			h2= text

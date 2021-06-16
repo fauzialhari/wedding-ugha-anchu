@@ -19,6 +19,7 @@ h2,
 h3,
 h4 {
     line-height: 1.1;
+    color: #6e6e6e;
 }
 
 h1 {
@@ -26,6 +27,9 @@ h1 {
     font-size: 5rem;
     margin: 0 0 0.4em;
     font-weight: 500;
+    @media only screen and (max-width: 600px) {
+        font-size: 3.5rem;
+    }
 }
 
 h2 {
@@ -40,6 +44,14 @@ h3 {
 }
 
 h4 {
-    font-family: 'Great Vibes', cursive;
     font-size: 1.44444rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+i.fa {
+    color: #6e6e6e;
 }

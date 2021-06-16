@@ -12,7 +12,11 @@ body {
 
     section {
         &.with-padding {
-            padding: 120px 0;
+            padding: 30px 0;
+
+            @media only screen and (max-width: 600px) {
+                padding: 0;
+            }
         }
     }
 }
@@ -34,7 +38,7 @@ img {
 
 .square-image {
     position: relative;
-    padding-top: 100%;
+    padding-top: 56.25%;
 
     > img {
         position: absolute;
