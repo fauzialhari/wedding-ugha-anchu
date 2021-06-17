@@ -1,8 +1,29 @@
 .bride-groom {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
     .detail {
         padding: 50px 55px;
         background-color: rgba(237, 194, 197, 0.3);
         height: 100%;
     }
 }
+
+// .closing {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-evenly;
+//     height: 100%;
+//     .copy {
+//         flex-grow: 1;
+//         display: flex;
+//         align-items: center;
+//     }
+//     .background-primary {
+//         background: $themecolor;
+//         color: white;
+//         padding: 20px 0;
+//     }
+// }

@@ -1,0 +1,20 @@
+.event-venue {
+    height: 100%;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        .copy {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        // .background-primary {
+        //     background: $themecolor;
+        //     color: white;
+        //     padding: 20px 0;
+        // }
+    }
+}

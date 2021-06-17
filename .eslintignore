@@ -1,2 +1,3 @@
 tools/*.js
+src/vendor/*.js
 dist

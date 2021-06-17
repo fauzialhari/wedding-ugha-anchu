@@ -16,6 +16,8 @@ import './style/print/print.scss';
 
 // Scripts Import
 import initMakeImageCover from './script/image-cover';
+import initFullPage from './script/initFullPage';
+import initRipplesEffect from './script/initRipplesEffect';
 import initLazyLoadImages from './script/lazyload-images';
 import initD3 from './script/init-d3';
 
@@ -29,6 +31,8 @@ $(() => {
     // invoke all functions
     initMakeImageCover();
     initLazyLoadImages();
+    initFullPage();
+    initRipplesEffect();
 
     sum('5', '1');
 

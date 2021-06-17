@@ -7,8 +7,14 @@ block variable
 	- var dataFromJson = jsonData.data;//data from json
 
 block content
-	+main-banner()
-	+bride-groom()
-	//- +venue()
-	include ../organisms/prokes/prokes.pug
-	+closing()
+	#fullpage.pages
+		.section
+			+seal()
+		.section
+			+main-banner()
+		.section
+			+bride-groom()
+		.section
+			+event-venue()
+		.section
+			+closing()

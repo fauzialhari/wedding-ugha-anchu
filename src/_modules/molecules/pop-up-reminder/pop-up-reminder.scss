@@ -9,6 +9,10 @@
     height: calc(350px / 2);
     overflow: hidden;
     color: white;
+    @media only screen and (max-width: 600px) {
+        width: 270px;
+        height: calc(270px / 2);
+    }
 
     @keyframes pulse {
         from {
@@ -21,6 +25,22 @@
 
         to {
             transform: translate(-50%, 50%) scale3d(1, 1, 1);
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        @keyframes pulse {
+            from {
+                transform: translate(-50%, 55%) scale3d(1, 1, 1);
+            }
+
+            50% {
+                transform: translate(-50%, 55%) scale3d(0.95, 0.95, 0.95);
+            }
+
+            to {
+                transform: translate(-50%, 55%) scale3d(1, 1, 1);
+            }
         }
     }
 
@@ -38,6 +58,11 @@
         z-index: -1;
         border-top-left-radius: 50%;
         border-top-right-radius: 50%;
+        @media only screen and (max-width: 600px) {
+            width: calc(270px * 0.9);
+            height: calc(270px * 0.9);
+            transform: translate(-50%, 55%);
+        }
     }
 
     &::before {
@@ -45,6 +70,10 @@
         height: 350px;
         background-color: rgba(237, 194, 197, 0.6);
         animation: pulse 1s infinite;
+        @media only screen and (max-width: 600px) {
+            width: 270px;
+            height: 270px;
+        }
     }
 
     p {

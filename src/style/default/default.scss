@@ -7,8 +7,20 @@
     }
 }
 
+html {
+    @media only screen and (max-width: 600px) {
+        font-size: 14px;
+    }
+}
+
 body {
     color: $bodyfontcolor;
+    background: url('~img/FLORAL_FRAME-01.png');
+
+    @media only screen and (min-width: 601px) {
+        background-size: cover;
+        background-position: top center;
+    }
 
     section {
         &.with-padding {
@@ -75,4 +87,9 @@ blockquote {
     width: 120px;
     height: 120px;
     margin-right: 20px;
+}
+
+canvas {
+    // z-index: 1000 !important;
+    // pointer-events: none;
 }
