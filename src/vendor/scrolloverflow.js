@@ -590,7 +590,8 @@
             // We need to move at least 10 pixels for the scrolling to initiate
             if (
                 timestamp - this.endTime > 300 &&
-                absDistX < 10 && absDistY < 10
+                absDistX < 10 &&
+                absDistY < 10
             ) {
                 return;
             }
