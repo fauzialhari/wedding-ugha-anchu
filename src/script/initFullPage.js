@@ -33,6 +33,8 @@ const initFullPage = () => {
             autoScrolling: true,
             scrollHorizontally: true,
             // scrollOverflow: true,
+            scrollingSpeed: 1300,
+            easingcss3: 'ease-in-out',
         });
 
         // methods

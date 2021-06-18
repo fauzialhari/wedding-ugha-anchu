@@ -1,16 +1,25 @@
 include ../../molecules/title-marker/title-marker.pug
 
-section.prokes.text-center.with-padding
+.prokes.text-center
 	.container
 		//- +title-marker("Protokol Kesehatan", true)
 		h3 Protokol Kesehatan
 		.row.align-items-center 
 			.col.col-lg-auto 
-				img(src="../../img/icon/face-mask.svg", alt="")
-				p Memakai masker
+				.img-container
+					img(src="../../img/icon/face-mask.svg", alt="")
+				p Memakai 
+					br.d-none.d-sm-inline
+					| masker
 			.col.col-lg-auto 
-				img(src="../../img/icon/hand-washing.svg", alt="")
-				p Mencuci tangan
+				.img-container
+					img(src="../../img/icon/hand-washing.svg", alt="")
+				p Mencuci 
+					br.d-none.d-sm-inline
+					| tangan
 			.col.col-lg-auto  
-				img(src="../../img/icon/social-distancing.svg", alt="")
-				p Menjaga jarak
+				.img-container
+					img(src="../../img/icon/social-distancing.svg", alt="")
+				p Menjaga 
+					br.d-none.d-sm-inline
+					| jarak

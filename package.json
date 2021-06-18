@@ -28,6 +28,7 @@
     "author": "Fauzi Alhari",
     "license": "ISC",
     "dependencies": {
+        "animate.css": "4.1.1",
         "bootstrap": "4.6.0",
         "d3": "5.11.0",
         "font-awesome": "4.7.0",
