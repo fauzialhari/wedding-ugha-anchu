@@ -20,6 +20,7 @@ import initFullPage from './script/initFullPage';
 import initRipplesEffect from './script/initRipplesEffect';
 import initLazyLoadImages from './script/lazyload-images';
 import initD3 from './script/init-d3';
+import setTextInvitedWhomAndWhere from './_modules/organisms/seal/seal';
 
 // Favicon Import
 import './img/favicon.ico';
@@ -33,6 +34,7 @@ $(() => {
     initLazyLoadImages();
     initFullPage();
     initRipplesEffect();
+    setTextInvitedWhomAndWhere();
 
     sum('5', '1');
 

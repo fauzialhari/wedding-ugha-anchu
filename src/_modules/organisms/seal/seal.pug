@@ -4,13 +4,13 @@ mixin seal()
 		.container-fluid
 			.row.relative 
 				img(src="../../img/main-banner.png", alt="", srcset="")
-				.announcement.absolute 
+				.announcement.absolute.value-from-qs 
 					h2.need-animate.animate__animated.animate__fadeInUp
 						small Yth:
 						br 
-						| Bapak / Ibu / Saudara(i) 
+						span.text-capitalize#name-to Bapak / Ibu / Saudara(i) 
 						br
 						small di 
 						br
-						| Tempat
+						span.text-capitalize#location-to Tempat
 
