@@ -2,17 +2,17 @@ include ../../molecules/title-marker/title-marker.pug
 mixin bride-groom()
 	section.bride-groom.with-padding.text-center 
 		.container 
-			+title-marker("بسم الله الرحمن الرحيم")
-			//- p بسم الله الرحمن الرحيم
-			p.wow.animate__fadeInUp  
+			.need-animate(data-delay="0", data-animation="animate__animated animate__fadeInUp animate__slow")
+				+title-marker("بسم الله الرحمن الرحيم")
+			p.need-animate(data-delay="500", data-animation="animate__animated animate__fadeInUp animate__slow") 
 				i Assalamu Alaikum Warohmatullahi Wabarokatuh 
-			p Dengan memohon rahmat dan ridho Allah ﷺ, 
+			p.need-animate(data-delay="1000", data-animation="animate__animated animate__fadeInUp animate__slow") Dengan memohon rahmat dan ridho Allah ﷺ, 
 				br
 				| kami bermaksud menyelenggarakan Resepsi Pernikahan 
 				br.d-none.d-lg-inline
 				| putra-putri kami: 
 				br
-			h1 dr. Anugrah Alhari 
+			h1.need-animate(data-delay="1500", data-animation="animate__animated animate__fadeInUp animate__slow") dr. Anugrah Alhari 
 				br
 				| &
 				br

@@ -3,23 +3,27 @@ include ../../molecules/title-marker/title-marker.pug
 .prokes.text-center
 	.container
 		//- +title-marker("Protokol Kesehatan", true)
-		h3 Protokol Kesehatan
+		h3.need-animate(data-delay="2500", data-animation="animate__animated animate__fadeInUp animate__slow") Protokol Kesehatan
+		br
 		.row.align-items-center 
 			.col.col-lg-auto 
-				.img-container
-					img(src="../../img/icon/face-mask.svg", alt="")
-				p Memakai 
-					br.d-none.d-sm-inline
-					| masker
+				.need-animate(data-delay="2750", data-animation="animate__animated animate__fadeInUp animate__slow")
+					.img-container
+						img(src="../../img/icon/face-mask.svg", alt="")
+					p Memakai 
+						br.d-sm-none
+						| masker
 			.col.col-lg-auto 
-				.img-container
-					img(src="../../img/icon/hand-washing.svg", alt="")
-				p Mencuci 
-					br.d-none.d-sm-inline
-					| tangan
-			.col.col-lg-auto  
-				.img-container
-					img(src="../../img/icon/social-distancing.svg", alt="")
-				p Menjaga 
-					br.d-none.d-sm-inline
-					| jarak
+				.need-animate(data-delay="3000", data-animation="animate__animated animate__fadeInUp animate__slow")
+					.img-container
+						img(src="../../img/icon/hand-washing.svg", alt="")
+					p Mencuci 
+						br.d-sm-none
+						| tangan
+			.col.col-lg-auto 
+				.need-animate(data-delay="3250", data-animation="animate__animated animate__fadeInUp animate__slow")
+					.img-container
+						img(src="../../img/icon/social-distancing.svg", alt="")
+					p Menjaga 
+						br.d-sm-none
+						| jarak

@@ -7,6 +7,6 @@ mixin main-banner()
 				//- img.d-lg-none(src="../../img/xs-main-banner.jpg", alt="", srcset="")
 				img(src="../../img/main-banner.jpg", alt="", srcset="")
 				.announcement.absolute 
-					h1 Uga & Anchu 
-					h3 AKAN MENIKAH
+					h1.need-animate(data-delay="0", data-animation="animate__animated animate__fadeInUp animate__slow") Uga & Anchu 
+					h3.need-animate(data-delay="500", data-animation="animate__animated animate__fadeInUp animate__slow") AKAN MENIKAH
 				include ../../molecules/pop-up-reminder/pop-up-reminder.pug

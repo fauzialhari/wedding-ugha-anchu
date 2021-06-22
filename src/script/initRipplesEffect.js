@@ -9,7 +9,7 @@ import '../vendor/jquery.ripples-min';
 const initRipplesEffect = () => {
     if ($('.ripple').length) {
         $('.ripple').ripples({
-            // resolution: 512,
+            resolution: 512,
             dropRadius: 4,
             perturbance: 0.5,
         });

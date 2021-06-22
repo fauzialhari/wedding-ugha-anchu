@@ -4,26 +4,28 @@ mixin event-venue()
 		.container.text-center 
 			.copy
 				.content
-					p Yang insyaa Allah akan dilaksanakan pada 
+					p.need-animate(data-delay="0", data-animation="animate__animated animate__fadeInUp animate__slow") Yang insyaa Allah akan dilaksanakan pada 
 					.row.justify-content-center.align-items-center 
 						.col.col-lg-auto 
-							h3 Akad Nikah 
-							span Pukul 10.00 WITA
-						.col.col-lg-auto.border-left.border-right  
-							h2 Minggu 
+							.need-animate(data-delay="1000", data-animation="animate__animated animate__fadeInUp animate__slow")
+								h3 Akad Nikah 
+								span Pukul 10.00 WITA
+						.col.col-lg-auto.need-animate(data-delay="1250", data-animation="animate__animated border-left border-right") 
+							h2.need-animate(data-delay="500", data-animation="animate__animated animate__fadeInUp animate__slow") Minggu 
 								br
 								| 11
 								br
 								| Juli 2021
-						.col.col-lg-auto  
-							h3 Resepsi 
-							span Pukul 11.00 - 14.30 WITA
+						.col.col-lg-auto 
+							.need-animate(data-delay="1500", data-animation="animate__animated animate__fadeInUp animate__slow")
+								h3 Resepsi 
+								span Pukul 11.00 - 14.30 WITA
 					br
 					.row
 						.col.col-lg
 							.venue
-								h3 Echalote Restaurant 
-								p
+								h3.need-animate(data-delay="2000", data-animation="animate__animated animate__fadeInUp animate__slow") Echalote Restaurant 
+								p.need-animate(data-delay="2500", data-animation="animate__animated animate__fadeInUp animate__slow")
 									span
 										i.fa.fa-map-marker 
 										|   Jl. A.P. Pettarani, no. 80, Makassar (sebelum kantor BPJS Kesehatan Pettarani)
