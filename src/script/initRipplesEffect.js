@@ -7,24 +7,28 @@ import $ from 'jquery';
 import '../vendor/jquery.ripples-min';
 
 const initRipplesEffect = () => {
-    if ($('.ripple').length) {
-        $('.ripple').ripples({
-            resolution: 512,
-            dropRadius: 4,
-            perturbance: 0.5,
-        });
+    try {
+        if ($('.ripple').length) {
+            $('.ripple').ripples({
+                resolution: 512,
+                dropRadius: 4,
+                perturbance: 0.5,
+            });
 
-        // Automatic drops
-        setInterval(() => {
-            const $el = $('.ripple');
-            const x = Math.random() * $el.outerWidth();
-            const y = Math.random() * $el.outerHeight();
-            const dropRadius = 20;
-            // eslint-disable-next-line no-mixed-operators
-            const strength = 0.04 + Math.random() * 0.04;
+            // Automatic drops
+            setInterval(() => {
+                const $el = $('.ripple');
+                const x = Math.random() * $el.outerWidth();
+                const y = Math.random() * $el.outerHeight();
+                const dropRadius = 20;
+                // eslint-disable-next-line no-mixed-operators
+                const strength = 0.04 + Math.random() * 0.04;
 
-            $el.ripples('drop', x, y, dropRadius, strength);
-        }, 400);
+                $el.ripples('drop', x, y, dropRadius, strength);
+            }, 400);
+        }
+    } catch (error) {
+        console.error('Failed to create riplles');
     }
 };
 
