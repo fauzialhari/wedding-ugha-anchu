@@ -20,7 +20,9 @@ import initFullPage from './script/initFullPage';
 import initRipplesEffect from './script/initRipplesEffect';
 import initLazyLoadImages from './script/lazyload-images';
 import initD3 from './script/init-d3';
-import setTextInvitedWhomAndWhere from './_modules/organisms/seal/seal';
+import setTextInvitedWhomAndWhere, {
+    onClickButtonConfirm,
+} from './_modules/organisms/seal/seal';
 
 // Favicon Import
 import './img/favicon.ico';
@@ -29,11 +31,13 @@ import './img/favicon.ico';
 const sum = require('./script/sum');
 
 $(() => {
+    console.log(onClickButtonConfirm);
     // invoke all functions
     initMakeImageCover();
     initLazyLoadImages();
     initFullPage();
     initRipplesEffect();
+    onClickButtonConfirm();
     setTextInvitedWhomAndWhere();
 
     sum('5', '1');

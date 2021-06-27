@@ -10,7 +10,31 @@ mixin seal()
 						br 
 						span.text-capitalize#name-to Bapak / Ibu / Saudara(i) 
 						br
+						br
 						small di 
 						br
 						span.text-capitalize#location-to Tempat
+				.usability.absolute.d-none 
+					.image-container 
+						.row.align-items-center.for-touch-devices 
+							.col
+								img.arrow-up(src="../../img/icon/up-arrow.svg", alt="", srcset="")
+								img.arrow-down(src="../../img/icon/up-arrow.svg", alt="", srcset="")
+							.col 
+								img.hand-swipe(src="../../img/icon/hand.svg", alt="", srcset="")
+						.row.align-items-center.for-non-touch-devices 
+							.col
+								img.arrow-up(src="../../img/icon/up-arrow.svg", alt="", srcset="")
+								img.arrow-down(src="../../img/icon/up-arrow.svg", alt="", srcset="")
+							.col 
+								img.mouse-scroll.animate__animated.animate__shakeY.animate__slower.animate__infinite.infinite(src="../../img/icon/scroll.svg", alt="", srcset="")
+						.row 
+							.col 
+								p.text-white 
+									br
+									| Gunakan 
+									span.for-touch-devices swipe atas dan swipe bawah 
+									span.for-non-touch-devices scroll atas dan scroll bawah 
+									| untuk melihat undangan ya 
+								button.confirm Oke, Mengerti
 

@@ -138,7 +138,7 @@ module.exports = __webpack_require__.p + "index.html";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/pug-html-loader/lib/index.js):\nTypeError: pug_mixins.venue is not a function\n    at eval (eval at wrap (D:\\Fauzi\\wedding-ugha-anchu\\node_modules\\pug-runtime\\wrap.js:6:10), <anonymous>:345:20)\n    at template (eval at wrap (D:\\Fauzi\\wedding-ugha-anchu\\node_modules\\pug-runtime\\wrap.js:6:10), <anonymous>:347:1480)\n    at Object.module.exports (D:\\Fauzi\\wedding-ugha-anchu\\node_modules\\pug-html-loader\\lib\\index.js:33:10)");
+throw new Error("Module build failed (from ./node_modules/pug-html-loader/lib/index.js):\nTypeError: pug_mixins.venue is not a function\n    at eval (eval at wrap (D:\\Fauzi\\wedding-ugha-anchu\\node_modules\\pug-runtime\\wrap.js:6:10), <anonymous>:381:20)\n    at template (eval at wrap (D:\\Fauzi\\wedding-ugha-anchu\\node_modules\\pug-runtime\\wrap.js:6:10), <anonymous>:383:1480)\n    at Object.module.exports (D:\\Fauzi\\wedding-ugha-anchu\\node_modules\\pug-html-loader\\lib\\index.js:33:10)");
 
 /***/ }),
 

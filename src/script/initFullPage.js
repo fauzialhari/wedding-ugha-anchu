@@ -21,6 +21,9 @@ const initFullPage = () => {
                 });
             },
         });
+        if (!localStorage.getItem('confirmedOn')) {
+            $.fn.fullpage.setAllowScrolling(false);
+        }
     });
 };
 
